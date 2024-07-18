@@ -79,5 +79,5 @@ def create_mosaic_image(
             output_img = np.concat([output_img, output_img_row], axis=0)
 
     now = datetime.now()
-    timestamp = now.strftime("%Y-%m-%d %H:%M:%S %Z%z")
+    timestamp = now.strftime("%Y-%m-%d %H%M%S %Z%z")
     cv2.imwrite(f"./output/{timestamp}.jpg", output_img)
