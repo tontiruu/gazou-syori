@@ -11,9 +11,10 @@ def create_image(
     target_resize_rate: float = 0.1,
 ) -> None:
     print(f"{material_word}でできた、{target_word}を生成します")
+    print("\nImage collecting ...")
     scrape_img(keyword=material_word, max_num=material_max_nums, path="color_materials")
     scrape_img(keyword=target_word, max_num=1, path="convert_images")
-    print("\n\n Image collection is complete! \n\n")
+    print(" Image collection is complete! ")
     util.resize_image_in_dir("color_materials", size=material_img_size)
     print("\n\nGenerating image ...")
     color_palette: util.MaterialMeanColor = util.parse_materials_mean_color()
@@ -22,4 +23,4 @@ def create_image(
         color_palette=color_palette,
         resize_rate=target_resize_rate,
     )
-    print("\n\nDone!")
+    print("\nDone!")
