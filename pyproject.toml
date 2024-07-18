@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gazou-syori"
+version = "0.1.0"
+description = ""
+authors = ["tontiruu <113325721+tontiruu@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opencv-python = "^4.10.0.84"
+bs4 = "^0.0.2"
+icrawler = "^0.6.9"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
